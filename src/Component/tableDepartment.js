@@ -49,8 +49,11 @@ const columns = [
     },
 ];
 
-const TableDepartment = () => <Table columns={columns} dataSource={departments} style={{
-    boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
-    overflow: 'scroll'
-}} />;
+const TableDepartment = () =>
+    <>
+        <Table columns={columns} dataSource={departments} style={{
+            boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
+        }} />
+    </>
+
 export default TableDepartment;

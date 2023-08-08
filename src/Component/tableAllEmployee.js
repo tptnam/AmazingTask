@@ -102,8 +102,16 @@ const columns = [
     },
 ];
 
-const TableAllDepartment = () => <Table columns={columns} dataSource={employees} style={{
-    boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
-    overflow: 'scroll'
-}} />;
+const TableAllDepartment = () =>
+    <>
+        <Table columns={columns} dataSource={employees} style={{
+            boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
+
+        }}
+            scroll={{
+                x: 500,
+
+            }} />
+    </ >
+
 export default TableAllDepartment;
