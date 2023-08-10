@@ -16,20 +16,35 @@ const { Header, Footer, Sider, Content } = Layout;
 
 
 function App() {
-  const [selector, setSelector] = useState(1);
-  console.log(selector);
+
 
   const handleSelectorChange = (newSelector) => {
     setSelector(newSelector);
   };
 
+  const [selector, setSelector] = useState(1);
+
+
+  const buttonHoverStyle = {
+    backgroundColor: '#transparent',
+    border: '1px solid blue',
+    color: 'white',
+  };
+
+  const buttonStyle = {
+    backgroundColor: 'transparent',
+    border: '1px solid black',
+    color: 'black',
+  };
 
   return (
     <Layout >
 
       <Sider
         width={'300px'}
-        theme="light">
+        theme="light"
+      >
+
 
         <HeaderMenu />
         <MenuSider setSelector={handleSelectorChange} />
@@ -94,7 +109,7 @@ function App() {
 
           <Content
             style={{
-              paddingLeft: '15%',
+              paddingLeft: '10%',
               paddingTop: '5%',
               paddingBottom: '5%',
 
@@ -132,8 +147,18 @@ function App() {
                       <Button style={{ color: '#32CD32', border: '#32CD32 1px solid', marginLeft: 10 }}>Làm mới</Button>
                     </div>
                   </div>
-
-                  <Button>+ Thêm nhân viên</Button>
+                  <Button
+                    style={buttonStyle}
+                    className="custom-button"
+                    onMouseEnter={(e) => {
+                      e.target.style = { ...e.target.style, ...buttonHoverStyle };
+                    }}
+                    onMouseLeave={(e) => {
+                      e.target.style = { ...e.target.style, ...buttonStyle };
+                    }}
+                  >
+                    + Thêm nhân viên
+                  </Button>
                 </div>
 
 
@@ -220,7 +245,18 @@ function App() {
                   </div>
                 </div>
 
-                <Button>+ Thêm nhân viên</Button>
+                <Button
+                  style={buttonStyle}
+                  className="custom-button"
+                  onMouseEnter={(e) => {
+                    e.target.style = { ...e.target.style, ...buttonHoverStyle };
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style = { ...e.target.style, ...buttonStyle };
+                  }}
+                >
+                  + Thêm nhân viên
+                </Button>
               </div>
 
 

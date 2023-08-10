@@ -4,8 +4,8 @@ export const departments = [
         name: 'Sales',
         color: '#FF5733',
         manager: 1, // Refers to employee with ID 1
-        managername: 'Nguyễn Văn A', // Manager's name from employee array
-        emailManager: 'abc@example.com', // Manager's email from employee array
+        managername: 'Nguyễn Văn Aaaaaaaaaaaaaa', // Manager's name from employee array
+        emailManager: 'asjhajshajssjhsbc@example.com', // Manager's email from employee array
         amountEmployees: 5, // Number of employees in the Sales department
         phone: '1234567890', // Manager's phone number
     },

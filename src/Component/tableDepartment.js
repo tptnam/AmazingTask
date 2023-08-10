@@ -53,7 +53,14 @@ const TableDepartment = () =>
     <>
         <Table columns={columns} dataSource={departments} style={{
             boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
-        }} />
+        }}
+            pagination={{
+                pageSize: 5,
+            }}
+        // scroll={{
+        //     x: 240,
+        // }}
+        />
     </>
 
 export default TableDepartment;

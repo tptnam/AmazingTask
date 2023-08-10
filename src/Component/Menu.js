@@ -7,6 +7,7 @@ import {
 
 } from '@ant-design/icons';
 import { Menu } from 'antd';
+import { useEffect } from 'react';
 
 function getItem(label, key, icon, children, type) {
     return {
@@ -52,6 +53,7 @@ const items = [
         getItem('Hợp Đồng Của Tôi', '15', <MailOutlined />)
     ]),
 
+
     getItem(<span style={{ fontWeight: 'bolder' }} >TUYỂN DỤNG</span>, 'sub7', <></>, [
         getItem('Danh Sách Ứng Viên', '16', <TeamOutlined />),
     ]),
@@ -59,22 +61,35 @@ const items = [
 
 const MenuSider = (props) => {
 
+    useEffect(() => {
+        const savedSelectedKey = localStorage.getItem('selectedKey');
+        if (savedSelectedKey) {
+            props.setSelector(parseInt(savedSelectedKey));
+        }
+    }, []);
+
     const handleOnclick = (e) => {
-        props.setSelector(parseInt(e.key));
+        const selectedKeyabv = parseInt(e.key);
+        localStorage.setItem('selectedKey', selectedKeyabv);
+        props.setSelector(selectedKeyabv);
     };
 
+
+    const savedSelectedKey = localStorage.getItem('selectedKey');
+
     return (
-        <div style={{ width: 'fit-content', minHeight: '100vh', overflowY: 'scroll' }}>
+        <div style={{ width: 'fit-content', minHeight: '100vh', }}>
             <Menu
                 style={{
                     minHeight: '100vh',
-                    width: 284
-
+                    width: 284,
                 }}
                 onClick={handleOnclick}
-                defaultSelectedKeys={['1']}
+                defaultSelectedKeys={[savedSelectedKey || '1']}
+                defaultOpenKeys={['sub1', 'sub2', 'sub3', 'sub4', 'sub5', 'sub6', 'sub7']}
                 mode="inline"
                 items={items}
+
 
             />
         </div >

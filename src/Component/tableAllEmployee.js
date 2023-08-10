@@ -20,7 +20,7 @@ const columns = [
         render: (_, { status }) => (
             <>
                 {status ? <Avatar size="large" src=
-                    "https://scontent.fsgn5-14.fna.fbcdn.net/v/t39.30808-6/233084184_1491236247879885_9080631247516219420_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=GiJaHyKStRkAX_1Uv8j&_nc_ht=scontent.fsgn5-14.fna&oh=00_AfAEGJuEmNjhvLBsrTqpGlNekYSUY3byFjtarAPzS7hhnA&oe=64D44B75"
+                    "https://scontent.fsgn5-1.fna.fbcdn.net/v/t39.30808-6/233084184_1491236247879885_9080631247516219420_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=YvunFBC1WdYAX9Ee_JY&_nc_ht=scontent.fsgn5-1.fna&oh=00_AfBiy9uEXITglTCVw1MVUAHqNhIx0g1soxOR3HNczGpMYA&oe=64DA3A35"
                 >
                 </Avatar> :
                     <Avatar size="large" src="https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/258859759_1345037795951286_5683834817039929278_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=oDDD_NFfbEkAX8uf6Jc&_nc_ht=scontent.fsgn5-5.fna&oh=00_AfBh-d_foo2HhqbuAK3tvjYNUoYbPk_d4GW47mKG5i9TZg&oe=64D72106"
@@ -35,7 +35,7 @@ const columns = [
         key: 'id',
     },
     {
-        title: <div style={{ minWidth: '8rem' }}><ProfileOutlined /> Tên nhân viên</div>,
+        title: <div style={{ minWidth: '7rem' }}><ProfileOutlined /> Tên nhân viên</div>,
         dataIndex: 'name',
         key: 'name',
         render: (text) => <div>{text}</div>,
@@ -108,8 +108,13 @@ const TableAllDepartment = () =>
             boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
 
         }}
+            pagination={{
+                pageSize: 5,
+            }}
+
             scroll={{
                 x: 500,
+
 
             }} />
     </ >
