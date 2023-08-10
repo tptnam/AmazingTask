@@ -41,8 +41,11 @@ function App() {
     <Layout >
 
       <Sider
-        width={'300px'}
+        width={'fit-content'}
         theme="light"
+        style={{
+          Height: '100vh'
+        }}
       >
 
 
@@ -54,7 +57,8 @@ function App() {
 
 
 
-      {selector === 1 &&
+      {
+        selector === 1 &&
         <Layout>
           <Header
             style={{
@@ -84,9 +88,11 @@ function App() {
           >
             Ant Design ©2023 Created by Ant UED
           </Footer>
-        </Layout>}
+        </Layout>
+      }
 
-      {selector === 2 &&
+      {
+        selector === 2 &&
         <Layout style={{
           borderLeft: 'solid 0.5px grey'
         }}>
@@ -183,7 +189,8 @@ function App() {
         </Layout>
       }
 
-      {selector === 4 &&
+      {
+        selector === 4 &&
         <Layout style={{
           borderLeft: 'solid 0.5px grey'
         }}>

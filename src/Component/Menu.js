@@ -78,11 +78,12 @@ const MenuSider = (props) => {
     const savedSelectedKey = localStorage.getItem('selectedKey');
 
     return (
-        <div style={{ width: 'fit-content', minHeight: '100vh', }}>
+        <div style={{ width: 'fit-content', height: '100vh', overflowY: 'scroll' }}>
             <Menu
                 style={{
-                    minHeight: '100vh',
+
                     width: 284,
+
                 }}
                 onClick={handleOnclick}
                 defaultSelectedKeys={[savedSelectedKey || '1']}
