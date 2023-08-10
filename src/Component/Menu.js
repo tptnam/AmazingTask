@@ -78,7 +78,7 @@ const MenuSider = (props) => {
     const savedSelectedKey = localStorage.getItem('selectedKey');
 
     return (
-        <div style={{ width: 'fit-content', height: '100vh', overflowY: 'scroll' }}>
+        <div style={{ width: 'fit-content', height: '120vh', overflowY: 'scroll' }}>
             <Menu
                 style={{
 
