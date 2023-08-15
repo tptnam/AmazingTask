@@ -7,7 +7,9 @@ import TableDepartment from "./Component/tableDepartment";
 import TableAllDepartment from "./Component/tableAllEmployee";
 
 import {
-  LoginOutlined
+  LoginOutlined,
+  PlusOutlined
+
 
 } from '@ant-design/icons';
 
@@ -25,17 +27,17 @@ function App() {
   const [selector, setSelector] = useState(1);
 
 
-  const buttonHoverStyle = {
-    backgroundColor: '#transparent',
-    border: '1px solid blue',
-    color: 'white',
-  };
+  // const buttonHoverStyle = {
+  //   backgroundColor: '#transparent',
+  //   border: '1px solid blue',
+  //   color: 'white',
+  // };
 
-  const buttonStyle = {
-    backgroundColor: 'transparent',
-    border: '1px solid black',
-    color: 'black',
-  };
+  // const buttonStyle = {
+  //   backgroundColor: 'transparent',
+  //   border: '1px solid black',
+  //   color: 'black',
+  // };
 
   return (
     <Layout >
@@ -154,16 +156,17 @@ function App() {
                     </div>
                   </div>
                   <Button
-                    style={buttonStyle}
-                    className="custom-button"
-                    onMouseEnter={(e) => {
-                      e.target.style = { ...e.target.style, ...buttonHoverStyle };
-                    }}
-                    onMouseLeave={(e) => {
-                      e.target.style = { ...e.target.style, ...buttonStyle };
-                    }}
+                    // style={buttonStyle}
+                    // className="custom-button"
+                    // onMouseEnter={(e) => {
+                    //   e.target.style = { ...e.target.style, ...buttonHoverStyle };
+                    // }}
+                    // onMouseLeave={(e) => {
+                    //   e.target.style = { ...e.target.style, ...buttonStyle };
+                    // }}
+                    type="primary"
                   >
-                    + Thêm nhân viên
+                    Thêm nhân viên<PlusOutlined />
                   </Button>
                 </div>
 
@@ -213,7 +216,7 @@ function App() {
           <Content
             style={{
               paddingLeft: '15%',
-              paddingTop: '5%',
+              paddingTop: '2%',
               paddingBottom: '5%',
               paddingRight: '15%',
 
@@ -253,16 +256,18 @@ function App() {
                 </div>
 
                 <Button
-                  style={buttonStyle}
-                  className="custom-button"
-                  onMouseEnter={(e) => {
-                    e.target.style = { ...e.target.style, ...buttonHoverStyle };
-                  }}
-                  onMouseLeave={(e) => {
-                    e.target.style = { ...e.target.style, ...buttonStyle };
-                  }}
+                  type="primary"
+                // style={buttonStyle}
+                // className="custom-button"
+                // onMouseEnter={(e) => {
+                //   e.target.style = { ...e.target.style, ...buttonHoverStyle };
+                // }}
+                // onMouseLeave={(e) => {
+                //   e.target.style = { ...e.target.style, ...buttonStyle };
+                // }}
                 >
-                  + Thêm nhân viên
+
+                  Thêm nhân viên<PlusOutlined />
                 </Button>
               </div>
 
@@ -277,14 +282,14 @@ function App() {
 
           </Content>
 
-
+          {/* 
           <Footer
             style={{
               textAlign: 'center',
             }}
           >
             Footer o day
-          </Footer>
+          </Footer> */}
         </Layout>
       }
 
