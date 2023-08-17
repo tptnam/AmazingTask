@@ -12,11 +12,15 @@ import { employees } from '../shared/employee';
 
 const columns = [
     {
+        className: 'expandable-column',
+        fixed: 'left',
         render: () => <EllipsisOutlined />
     },
     {
         dataIndex: 'status',
         key: 'status',
+        className: 'expandable-column',
+        fixed: 'left',
         render: (_, { status }) => (
             <>
                 {status ? <Avatar size="large" src=
@@ -30,34 +34,41 @@ const columns = [
         ),
     },
     {
+        className: 'expandable-column',
         title: 'ID',
         dataIndex: 'id',
         key: 'id',
+        fixed: 'left',
     },
     {
-        title: <div style={{ minWidth: '7rem' }}><ProfileOutlined /> Tên nhân viên</div>,
+        title: <div><ProfileOutlined /> Tên nhân viên</div>,
         dataIndex: 'name',
         key: 'name',
+        className: 'expandable-column',
+        fixed: 'left',
         render: (text) => <div>{text}</div>,
     },
     {
-        title: <div style={{ minWidth: '12rem' }}><UnorderedListOutlined /> Phòng ban</div>,
+        title: <div><UnorderedListOutlined /> Phòng ban</div>,
         dataIndex: 'department',
         key: 'name',
+        className: 'expandable-column',
         render: (text, record) => <div style={{ display: 'flex', alignItems: 'center', gap: '.5rem' }}>
             <div style={{ backgroundColor: record.color, minWidth: '10px', height: '10px', borderRadius: '50%' }}></div>
             {text}
         </div>
     },
     {
-        title: <div style={{ minWidth: '9rem' }} ><PhoneOutlined /> Số điện thoại</div>,
+        title: <div ><PhoneOutlined /> Số điện thoại</div>,
         dataIndex: 'phone',
         key: 'phone',
+        className: 'expandable-column',
     },
     {
-        title: <div style={{ minWidth: '7rem' }} ><UnorderedListOutlined /> Giới tính</div>,
+        title: <div><UnorderedListOutlined /> Giới tính</div>,
         dataIndex: 'gender',
         key: 'gender',
+        className: 'expandable-column',
         render: (text, recordÏ, index) => {
             if (text === 'Nam') {
                 return <Tag color='blue' key={index}>Nam</Tag>
@@ -66,19 +77,22 @@ const columns = [
         }
     },
     {
-        title: <div style={{ minWidth: '10rem' }} ><ProfileOutlined /> Email</div>,
+        title: <div><ProfileOutlined /> Email</div>,
         dataIndex: 'email',
         key: 'email',
+        className: 'expandable-column',
     },
     {
-        title: <div style={{ minWidth: '7rem' }} ><ProfileOutlined /> Ngân hàng</div>,
+        title: <div><ProfileOutlined /> Ngân hàng</div>,
         dataIndex: 'bank',
         key: 'bank',
+        className: 'expandable-column',
     },
     {
-        title: <div style={{ minWidth: '10rem' }} ><CalendarOutlined /> Ngày sinh</div>,
+        title: <div><CalendarOutlined /> Ngày sinh</div>,
         dataIndex: 'birthday',
         key: 'birthday',
+        className: 'expandable-column',
         render: (text) => (
             <div>
                 {(new Date(text), "d 'tháng' M 'năm' yyyy")}
@@ -86,19 +100,22 @@ const columns = [
         )
     },
     {
-        title: <div style={{ minWidth: '12rem' }} ><ProfileOutlined /> Địa chỉ</div>,
+        title: <div><ProfileOutlined /> Địa chỉ</div>,
         dataIndex: 'address',
         key: 'address',
+        className: 'expandable-column',
     },
     {
-        title: <div style={{ minWidth: '10rem' }}> <UnorderedListOutlined /> Quốc gia</div>,
+        title: <div> <UnorderedListOutlined /> Quốc gia</div>,
         dataIndex: 'nation',
         key: 'nation',
+        className: 'expandable-column',
     },
     {
-        title: <div style={{ minWidth: '10rem' }}> <BorderlessTableOutlined />Tài khoản ngân hàng</div>,
+        title: <div> <BorderlessTableOutlined />Tài khoản ngân hàng</div>,
         dataIndex: 'bankaccount',
         key: 'bankaccount',
+        className: 'expandable-column',
     },
 ];
 
@@ -113,9 +130,7 @@ const TableAllDepartment = () =>
             }}
 
             scroll={{
-                x: 500,
-
-
+                x: true,
             }} />
     </ >
 

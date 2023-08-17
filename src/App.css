@@ -1,0 +1,10 @@
+.expandable-column {
+    /* Đảm bảo cột không quá rộng và không xuống dòng */
+    white-space: nowrap;
+    max-width: 2000px;
+    /* Điều chỉnh độ rộng tối đa của cột */
+
+    /* Sử dụng hiệu ứng "ellipsis" để ẩn nội dung quá rộng */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

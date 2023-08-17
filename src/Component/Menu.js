@@ -6,8 +6,9 @@ import {
     MailOutlined,
 
 } from '@ant-design/icons';
-import { Menu } from 'antd';
+import { Menu, Layout, Avatar } from 'antd';
 import { useEffect } from 'react';
+const { Header } = Layout;
 
 function getItem(label, key, icon, children, type) {
     return {
@@ -78,11 +79,23 @@ const MenuSider = (props) => {
     const savedSelectedKey = localStorage.getItem('selectedKey');
 
     return (
-        <div style={{ width: 'fit-content', height: '120vh', overflowY: 'scroll' }}>
+        <div style={{ width: 'fit-content', }}>
+            <Header style={{
+                background: 'white',
+            }}>
+
+                <Avatar size="large" src=
+                    "https://scontent.fsgn5-1.fna.fbcdn.net/v/t39.30808-6/233084184_1491236247879885_9080631247516219420_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=YvunFBC1WdYAX9Ee_JY&_nc_ht=scontent.fsgn5-1.fna&oh=00_AfBiy9uEXITglTCVw1MVUAHqNhIx0g1soxOR3HNczGpMYA&oe=64DA3A35"
+                >
+                </Avatar>
+                <span>&nbsp;&nbsp;Nguyen Van Quan Li</span>
+            </Header>
             <Menu
                 style={{
 
-                    width: 284,
+                    width: '100%',
+                    height: '100vh', overflowY: 'scroll'
+
 
                 }}
                 onClick={handleOnclick}

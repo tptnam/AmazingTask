@@ -5,6 +5,10 @@ import HeaderMenu from "./Component/HeaderMenu";
 import { useState } from "react";
 import TableDepartment from "./Component/tableDepartment";
 import TableAllDepartment from "./Component/tableAllEmployee";
+import CreateEmployee from "./Component/CreateEmployee";
+import ContractEmployee from "./Component/contractEmployee";
+
+
 
 import {
   LoginOutlined,
@@ -43,15 +47,12 @@ function App() {
     <Layout >
 
       <Sider
-        width={'fit-content'}
         theme="light"
         style={{
-          Height: '100vh'
+          minHeight: '80vh',
         }}
+        width={'fit-content'}
       >
-
-
-        <HeaderMenu />
         <MenuSider setSelector={handleSelectorChange} />
 
       </Sider>
@@ -62,6 +63,7 @@ function App() {
       {
         selector === 1 &&
         <Layout>
+
           <Header
             style={{
               background: 'black',
@@ -293,8 +295,131 @@ function App() {
         </Layout>
       }
 
+      {
+        selector === 5 &&
+        <Layout style={{
+          borderLeft: 'solid 0.5px grey',
+          minHeight: "50vh",
+        }}>
+          <Header
+            style={{
+              color: 'black',
+              background: 'white',
+              display: 'flex',
+              justifyContent: 'space-between'
+            }}
+          >
+
+            <span style={{ fontWeight: 'bolder' }}>Toàn Bộ Nhân Viên</span>
+            <Button style={{ color: 'blue', border: '1px solid blue', marginTop: 15 }} ><LoginOutlined /></Button>
 
 
+          </Header>
+
+
+          <Content
+            style={{
+              paddingLeft: '10%',
+              paddingTop: '2%',
+              paddingBottom: '5%',
+              paddingRight: '10%',
+              height: "100vh"
+
+            }}
+          >
+            <CreateEmployee />
+
+
+
+
+          </Content>
+
+          {/* 
+          <Footer
+            style={{
+              textAlign: 'center',
+            }}
+          >
+            Footer o day
+          </Footer> */}
+        </Layout>
+      }
+
+
+      {
+        selector === 14 &&
+        <Layout style={{
+          borderLeft: 'solid 0.5px grey'
+        }}>
+          <Header
+            style={{
+              color: 'black',
+              background: 'white',
+              display: 'flex',
+              justifyContent: 'space-between'
+            }}
+          >
+
+            <span style={{ fontWeight: 'bolder' }}>Hợp Đồng Nhân Viên</span>
+            <Button style={{ color: 'blue', border: '1px solid blue', marginTop: 15 }} ><LoginOutlined /></Button>
+
+
+          </Header>
+
+
+          <Content
+            style={{
+              paddingLeft: '15%',
+              paddingTop: '2%',
+              paddingBottom: '5%',
+              paddingRight: '15%',
+
+            }}
+          >
+
+            <div>
+
+              <div style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
+                padding: '2rem',
+                borderRadius: '.3rem',
+                marginBottom: '2rem',
+              }}>
+                <div>
+                  <Input placeholder="Tìm kiếm" style={{
+                    border: 'none',
+                    borderBottom: '1px solid gray',
+                    borderRadius: '0',
+                    width: '12rem',
+                    background: 'none'
+                  }} />
+                </div>
+
+              </div>
+
+
+
+              <hr />
+
+              <ContractEmployee />
+
+            </div>
+
+
+          </Content>
+
+          {/* 
+          <Footer
+            style={{
+              textAlign: 'center',
+            }}
+          >
+            Footer o day
+          </Footer> */}
+        </Layout>
+      }
     </Layout >
 
   );

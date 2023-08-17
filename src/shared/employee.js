@@ -1,7 +1,7 @@
 export const employees = [
     {
         id: 1,
-        name: 'Nguyễn Văn A',
+        name: 'Nguyễn Văn Aaaaaaaaaaaaaaaaaaaaaa',
         department: 'Sales',
         phone: '123-456-7890',
         gender: 'Nam',

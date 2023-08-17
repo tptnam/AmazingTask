@@ -4,7 +4,7 @@ const { Header } = Layout;
 
 function HeaderMenu() {
     return (
-        <div style={{ minWidth: '300px' }}>
+        <div style={{ width: '100%' }}>
             <Header style={{
                 background: 'white',
             }}>
