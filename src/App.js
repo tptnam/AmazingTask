@@ -1,12 +1,12 @@
 import "./App.css";
 import { Layout, Button, Space, Input, Select } from "antd";
 import MenuSider from "./Component/Menu";
-import HeaderMenu from "./Component/HeaderMenu";
 import { useState } from "react";
 import TableDepartment from "./Component/tableDepartment";
 import TableAllDepartment from "./Component/tableAllEmployee";
 import CreateEmployee from "./Component/CreateEmployee";
 import ContractEmployee from "./Component/contractEmployee";
+import MyContract from "./Component/MyContract";
 
 
 
@@ -44,12 +44,15 @@ function App() {
   // };
 
   return (
-    <Layout >
+    <Layout style={{
+      minHeight: '120vh',
+    }}>
 
       <Sider
         theme="light"
         style={{
-          minHeight: '80vh',
+          height: '120vh',
+
         }}
         width={'fit-content'}
       >
@@ -419,6 +422,65 @@ function App() {
             Footer o day
           </Footer> */}
         </Layout>
+      }
+
+
+
+      {
+        selector === 15 &&
+        <Layout style={{
+          borderLeft: 'solid 0.5px grey'
+        }}>
+          <Header
+            style={{
+              color: 'black',
+              background: 'white',
+              display: 'flex',
+              justifyContent: 'space-between'
+            }}
+          >
+
+            <span style={{ fontWeight: 'bolder' }}>Hợp Đồng Nhân Viên</span>
+            <Button style={{ color: 'blue', border: '1px solid blue', marginTop: 15 }} ><LoginOutlined /></Button>
+
+
+          </Header>
+
+
+          <Content
+            style={{
+              paddingLeft: '15%',
+              paddingTop: '2%',
+              paddingBottom: '5%',
+              paddingRight: '15%',
+
+            }}
+          >
+
+            <div>
+              <h1>Thông tin hợp đồng</h1>
+            </div>
+
+
+
+
+            <div style={{ marginLeft: '5%' }}>  <MyContract /></div>
+
+
+
+
+
+          </Content>
+
+          {/* 
+          <Footer
+            style={{
+              textAlign: 'center',
+            }}
+          >
+            Footer o day
+          </Footer> */}
+        </Layout >
       }
     </Layout >
 

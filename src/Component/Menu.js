@@ -79,7 +79,7 @@ const MenuSider = (props) => {
     const savedSelectedKey = localStorage.getItem('selectedKey');
 
     return (
-        <div style={{ width: 'fit-content', }}>
+        <div style={{ width: 'fit-content' }}>
             <Header style={{
                 background: 'white',
             }}>
@@ -94,10 +94,13 @@ const MenuSider = (props) => {
                 style={{
 
                     width: '100%',
-                    height: '100vh', overflowY: 'scroll'
+                    height: '90vh',
+                    minHeight: '90vh',
+                    overflowY: 'scroll'
 
 
                 }}
+
                 onClick={handleOnclick}
                 defaultSelectedKeys={[savedSelectedKey || '1']}
                 defaultOpenKeys={['sub1', 'sub2', 'sub3', 'sub4', 'sub5', 'sub6', 'sub7']}

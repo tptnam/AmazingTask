@@ -183,7 +183,7 @@ function CreateEmployee() {
                             onClick={() => prev()}
                             disabled
                         >
-                            Previous
+                            Quay lại
                         </Button>
                         <Button type="primary" onClick={() => next()}>
                             Next
@@ -272,7 +272,7 @@ function CreateEmployee() {
                 </Row>
 
                 <Row justify="center">
-                    <Col span={9}>
+                    <Col span={11}>
                         <Form.Item
                             name={"department"} label="Phòng ban"
                         >
@@ -286,8 +286,8 @@ function CreateEmployee() {
                             </Dropdown>
                         </Form.Item>
                     </Col>
-                    <Col span={1}></Col>
-                    <Col span={14}>
+                    <Col span={2}></Col>
+                    <Col span={11}>
                         <Form.Item
                             name={"CCCD"} label="CCCD|CMND"
                         >
@@ -321,31 +321,21 @@ function CreateEmployee() {
                         </Form.Item>
                     </Col>
                 </Row>
-
                 <div style={{
                     display: "flex",
                     justifyContent: 'space-between'
                 }}>
-
                     <Button
-                        style={{
-
-                        }}
                         onClick={() => prev()}
                     >
-                        Previous
+                        Quay lại
                     </Button>
-
                     <Button
                         type="primary"
                         onClick={() => next()}>
                         Hoàn Thành
                     </Button>
-
-
-
                 </div>
-
             </Form >
 
 
