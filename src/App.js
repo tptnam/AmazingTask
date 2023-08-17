@@ -49,9 +49,11 @@ function App() {
     }}>
 
       <Sider
+
         theme="light"
         style={{
           height: '120vh',
+          position: 'fixed'
 
         }}
         width={'fit-content'}
@@ -65,7 +67,9 @@ function App() {
 
       {
         selector === 1 &&
-        <Layout>
+        <Layout style={{
+          marginLeft: 284,
+        }}>
 
           <Header
             style={{
@@ -101,7 +105,7 @@ function App() {
       {
         selector === 2 &&
         <Layout style={{
-          borderLeft: 'solid 0.5px grey'
+          marginLeft: 284,
         }}>
           <Header
             style={{
@@ -200,7 +204,7 @@ function App() {
       {
         selector === 4 &&
         <Layout style={{
-          borderLeft: 'solid 0.5px grey'
+          marginLeft: 284,
         }}>
           <Header
             style={{
@@ -301,8 +305,7 @@ function App() {
       {
         selector === 5 &&
         <Layout style={{
-          borderLeft: 'solid 0.5px grey',
-          minHeight: "50vh",
+          marginLeft: 284,
         }}>
           <Header
             style={{
@@ -352,7 +355,7 @@ function App() {
       {
         selector === 14 &&
         <Layout style={{
-          borderLeft: 'solid 0.5px grey'
+          marginLeft: 284,
         }}>
           <Header
             style={{
@@ -429,7 +432,7 @@ function App() {
       {
         selector === 15 &&
         <Layout style={{
-          borderLeft: 'solid 0.5px grey'
+          marginLeft: 284,
         }}>
           <Header
             style={{
