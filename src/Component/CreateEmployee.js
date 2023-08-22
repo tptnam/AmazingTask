@@ -5,11 +5,16 @@ import { useState } from "react";
 function CreateEmployee() {
     const [statusCreate, setStatusCreate] = useState(0);
     const [accountCreate, setAccountCreate] = useState(null);
+    const [profileCreate, setProfileCreate] = useState(null);
 
     const onFinishCreateAccount = (e) => {
-        setAccountCreate = e;
-        setStatusCreate = 1;
+        setAccountCreate(e);
+        setStatusCreate(1);
+    }
 
+    const onFinishProfileAccount = (e) => {
+        setProfileCreate(e);
+        setStatusCreate(2);
     }
 
     const next = () => {
@@ -77,8 +82,8 @@ function CreateEmployee() {
     };
 
     const FORM = [
-        <CreateAccountEmployee onFinish={onFinishCreateAccount} />,
-        <FormInfo />
+        <CreateAccountEmployee onFinish={onFinishCreateAccount} initValue={accountCreate} />,
+        <FormInfo onFinish={onFinishProfileAccount} initValue={profileCreate} />
     ]
 
 
@@ -99,11 +104,15 @@ function CreateEmployee() {
         </div>
     )
 
-    function CreateAccountEmployee({ onFinish }) {
+    function CreateAccountEmployee({ onFinish, initValue }) {
         return (
-            <Form onFinish={onFinish}
-                layout="vertical">
-                <Form.Item label="Tên đăng nhập"
+            <Form
+                onFinish={onFinish}
+                initialValues={initValue}
+                layout="vertical"
+            >
+                <Form.Item
+                    label="Tên đăng nhập"
                     name={"accountName"}
                     rules={[
                         {
@@ -113,11 +122,10 @@ function CreateEmployee() {
                     }
                 >
                     <Input placeholder="Nhập tên đăng nhập" />
-
                 </Form.Item>
 
-                <Form.Item label="Email"
-
+                <Form.Item
+                    label="Email"
                     name={"email"}
                     rules={[
                         {
@@ -128,9 +136,9 @@ function CreateEmployee() {
                     ]
                     }>
                     <Input placeholder="Nhập email" />
-
                 </Form.Item>
-                <Form.Item label="Mật khẩu"
+                <Form.Item
+                    label="Mật khẩu"
                     name={"password"}
                     extra="Mật khẩu cần ít nhất 1 ký tự đặc biệt, 1 chữ hoa và một số"
                     rules={[
@@ -142,11 +150,7 @@ function CreateEmployee() {
                     ]
                     }>
                     <Input.Password placeholder="Nhập mật khẩu" />
-
-
-
                 </Form.Item>
-
                 <Form.Item label="Xác nhận mật khẩu"
                     name={"confirmPassword"}
                     dependencies={['password']}
@@ -166,12 +170,8 @@ function CreateEmployee() {
                         }),
                     ]}>
                     <Input.Password placeholder="Nhập lại mật khẩu" />
-
-
                 </Form.Item>
-
-
-                {statusCreate === 0 && (
+                <Form.Item>
                     <div style={{
                         display: "flex",
                         justifyContent: 'space-between'
@@ -185,14 +185,12 @@ function CreateEmployee() {
                         >
                             Quay lại
                         </Button>
-                        <Button type="primary" onClick={() => next()}>
+                        <Button type="primary" htmlType="submit">
                             Next
                         </Button>
 
                     </div>
-
-
-                )}
+                </Form.Item>
 
             </Form >
 
@@ -200,13 +198,13 @@ function CreateEmployee() {
 
     }
 
-    function FormInfo({ onFinish }) {
+    function FormInfo({ onFinish, initValue }) {
         const [value, setValue] = useState('');
         const onChange = (value) => {
             setValue(value.target.value);
         };
         return (
-            <Form onFinish={onFinish} name="validateOnly" layout="vertical" autoComplete="off">
+            <Form onFinish={onFinish} initialValues={initValue} name="validateOnly" layout="vertical" autoComplete="off">
                 <Row justify="center">
                     <Col span={11}>
                         <Form.Item

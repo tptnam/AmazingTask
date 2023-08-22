@@ -460,8 +460,8 @@ function App() {
             }}
           >
 
-            <div>
-              <h1>Thông tin hợp đồng</h1>
+            <div style={{ textAlign: 'center' }}>
+              <h1>THÔNG TIN HỢP ĐỒNG</h1>
             </div>
 
 

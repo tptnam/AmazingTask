@@ -24,10 +24,10 @@ const columns = [
         render: (_, { status }) => (
             <>
                 {status ? <Avatar size="large" src=
-                    "https://scontent.fsgn5-1.fna.fbcdn.net/v/t39.30808-6/233084184_1491236247879885_9080631247516219420_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=YvunFBC1WdYAX9Ee_JY&_nc_ht=scontent.fsgn5-1.fna&oh=00_AfBiy9uEXITglTCVw1MVUAHqNhIx0g1soxOR3HNczGpMYA&oe=64DA3A35"
+                    "https://scontent.fsgn5-1.fna.fbcdn.net/v/t39.30808-6/233084184_1491236247879885_9080631247516219420_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=xHAwSB2LqmUAX9hINOq&_nc_ht=scontent.fsgn5-1.fna&oh=00_AfDEdPjPFuUcElBciO_z2Cz3jskN76wFgf9T5R2YU4YcsA&oe=64E22335"
                 >
                 </Avatar> :
-                    <Avatar size="large" src="https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/258859759_1345037795951286_5683834817039929278_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=oDDD_NFfbEkAX8uf6Jc&_nc_ht=scontent.fsgn5-5.fna&oh=00_AfBh-d_foo2HhqbuAK3tvjYNUoYbPk_d4GW47mKG5i9TZg&oe=64D72106"
+                    <Avatar size="large" src="https://scontent.fsgn5-10.fna.fbcdn.net/v/t39.30808-6/258859759_1345037795951286_5683834817039929278_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=RNNWgocMeCwAX8Ub9uf&_nc_ht=scontent.fsgn5-10.fna&oh=00_AfASA5lymnNxvU2SDl5A6-TN_9mZ4cuDzrDOe-0NUjshdA&oe=64E2FE86"
                     >
                     </Avatar>}
             </>
